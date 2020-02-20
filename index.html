@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    <main class="main">
+    <header class="header">
+        <h1 class="header__title">Poznajmy się bliżej!</h1>
+        <span class="header__subtitle">Wypełnij wszystkie pola, aby przejść dalej.</span>
+    </header>
+    <form class="form">
+        <p>
+            <label for="name">Imię: </label><br>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="surname">Nazwisko: </label><br>
+            <input type="text" name="surname" id="surname">
+        </p>
+
+        <fieldset>
+            <legend>Płeć:</legend>
+            <p>
+                <input type="radio" name="sex" id="sex1">
+                <label for="sex">Kobieta</label>
+            </p>
+            <p>
+                <input type="radio" name="sex" id="sex2">
+                <label for="sex">Mężczyzna</label>
+            </p>
+        </fieldset>
+        <p>
+            <label for="phoneNumber">Numer telefonu: </label><br>
+            <input type="tel" name="phoneNumber" id="phoneNumber">
+        </p>
+        <p>
+            <label for="email">Email: </label><br>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <label for="question">Dlaczego zdecydowałeś/aś się na programowanie w programie Visual Studio Code? </label><br>
+            <textarea type="text" name="question" id="question"></textarea>
+        </p>
+        <p>
+            <label for="range" >W jakim stopniu podoba Ci się programowanie w Visual Studio Code? </label><br>
+            <input type="range" min=0 max=10 step=1 value=5 name="range" id="range">
+        </p>
+    </form>
+</main>
+</body>
+
+</html>
