@@ -11,49 +11,82 @@
 
 <body class="body">
     <main class="main">
-    <header class="header">
-        <h1 class="header__title">Poznajmy się bliżej!</h1>
-        <span class="header__subtitle">Wypełnij wszystkie pola, aby przejść dalej.</span>
-    </header>
-    <form class="form">
-        <p>
-            <label for="name">Imię: </label><br>
-            <input type="text" name="name" id="name">
-        </p>
-        <p>
-            <label for="surname">Nazwisko: </label><br>
-            <input type="text" name="surname" id="surname">
-        </p>
+        <header class="header">
+            <h1 class="header__title">Poznajmy się bliżej!</h1>
+            <span class="header__subtitle">Wypełnij wszystkie pola, aby przejść dalej.</span>
+        </header>
+        <form class="form" action="http://dev.cotenfrontend.pl/" method="POST">
+            <p>
+                <label for="name">Imię: </label><br>
+                <input type="text" required name="name" id="name">
+            </p>
+            <p>
+                <label for="surname">Nazwisko: </label><br>
+                <input type="text" required name="surname" id="surname">
+            </p>
+            <p>
+                <label for="age">Wiek: </label><br>
+                <input type="number" required name="age" id="age">
+            </p>
 
-        <fieldset>
-            <legend>Płeć:</legend>
+            <fieldset required>
+                <legend>Płeć:</legend>
+                <p>
+                    <input type="radio" value="Kobieta" name="sex" id="sex1">
+                    <label for="sex">Kobieta</label>
+                </p>
+                <p>
+                    <input type="radio" value="Mężczyzna" name="sex" id="sex2">
+                    <label for="sex">Mężczyzna</label>
+                </p>
+            </fieldset>
             <p>
-                <input type="radio" name="sex" id="sex1">
-                <label for="sex">Kobieta</label>
+                <label for="photo">Twoje zdjęcie (opcjonalnie): </label><br>
+                <input type="file" name="photo" id="photo">
             </p>
             <p>
-                <input type="radio" name="sex" id="sex2">
-                <label for="sex">Mężczyzna</label>
+                <label for="phoneNumber">Numer telefonu (opcjonalnie): </label><br>
+                <input type="tel" name="phoneNumber" id="phoneNumber">
             </p>
-        </fieldset>
-        <p>
-            <label for="phoneNumber">Numer telefonu: </label><br>
-            <input type="tel" name="phoneNumber" id="phoneNumber">
-        </p>
-        <p>
-            <label for="email">Email: </label><br>
-            <input type="email" name="email" id="email">
-        </p>
-        <p>
-            <label for="question">Dlaczego zdecydowałeś/aś się na programowanie w programie Visual Studio Code? </label><br>
-            <textarea type="text" name="question" id="question"></textarea>
-        </p>
-        <p>
-            <label for="range" >W jakim stopniu podoba Ci się programowanie w Visual Studio Code? </label><br>
-            <input type="range" min=0 max=10 step=1 value=5 name="range" id="range">
-        </p>
-    </form>
-</main>
+            <p>
+                <label for="email">Email: </label><br>
+                <input type="email" required name="email" id="email">
+            </p>
+            <p>
+                <label for="question">Dlaczego zdecydowałeś/aś się na programowanie w programie Visual Studio Code?
+                </label><br>
+                <textarea type="text" required name="question" id="question"></textarea>
+            </p>
+            <p>
+                <label for="rating">W jakim stopniu podoba Ci się programowanie w Visual Studio Code? </label><br>
+                <input type="range" required min=0 max=10 step=1 value=5 name="rating" id="rating">
+            </p>
+            <label>Jaki jest Twój ulubiony gatunek muzyczny?</label>
+            <p required>
+                <input type="checkbox" value="Rap" name="favouriteMusic" id="favouriteMusic1">
+                <label for="favouriteMusic1">Rap</label>
+                <input type="checkbox" value="Pop" name="favouriteMusic" id="favouriteMusic2">
+                <label for="favouriteMusic2">Pop</label>
+                <input type="checkbox" value="Muzyka poważna" name="favouriteMusic" id="favouriteMusic3">
+                <label for="favouriteMusic3">Muzyka poważna</label>
+                <input type="checkbox" value="Muzyka ludowa" name="favouriteMusic" id="favouriteMusic4">
+                <label for="favouriteMusic4">Muzyka ludowa</label>
+                <input type="checkbox" value="Ballady" name="favouriteMusic" id="favouriteMusic5">
+                <label for="favouriteMusic5">Ballady</label>
+            </p>
+            <p>
+                <label for="select">Czy nadal będziesz korzystać z Visual Studio Code?</label>
+                <select name="select" id="select">
+                    <option value="Będzie korzystać z VSC">Tak</option>
+                    <option value="Nie będzie korzystać z VSC">Nie</option>
+                    <option value="Jeszcze nie wie czy będzie korzystać z VSC">Jeszcze nie wiem</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Dalej">
+            </p>
+        </form>
+    </main>
 </body>
 
 </html>
